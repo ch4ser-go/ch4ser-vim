@@ -12,4 +12,7 @@ apt install neovim
 ```
 mkdir .config
 cd .config
-curl -fLo ~/.config/nvim/ --create-dir https://github.com/ch4ser-go/ch4ser-vim                                   
+git clone https://github.com/ch4ser-go/ch4ser-vim
+mv ch4ser-vim nvim
+nvim
+```
