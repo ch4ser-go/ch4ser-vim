@@ -1,12 +1,3 @@
-
-" Auto load for first time
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent! curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " editor setting
 
 set number
@@ -31,7 +22,9 @@ autocmd VimEnter * :silent! loadview
 " autocmd TabEnter * :silent! loadview
 " autocmd WinNew * :silent! loadview
 
-map ) $
+nnoremap ) $
+nnoremap ( 0
+nnoremap E :e 
 nnoremap w :mkview<CR>:w!<CR>
 nnoremap e w
 nnoremap Q q
@@ -45,11 +38,11 @@ func Runit()
     elseif &filetype == 'javascript'
 	exec "!time node %"
     elseif &filetype == 'c'
-	exec "!gcc % -o %<"
-	exec "!time sudo ./%<"
+	exec "!gcc % -o output -lpcap"
+	exec "!time sudo ./output"
     elseif &filetype == 'cpp'
-	exec "!g++ % -o %<"
-	exec "!time ./%<"
+	exec "!g++ % -o output"
+	exec "!time ./output"
     endif
 endfunc
 "
@@ -93,6 +86,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 "
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
@@ -194,14 +188,15 @@ hi! PmenuSel ctermbg=black ctermfg=darkblue guibg=NONE guifg=#eff0f4
 hi! PmenuThumb ctermbg=NONE guibg=NONE
 hi! visual ctermbg=black ctermfg=red guibg=none
 hi! wildmenu ctermbg=none ctermfg=234 guibg=none guifg=#17171b
+hi! Search ctermbg=NONE ctermfg=darkgreen guibg=NONE guifg=#392313
 
 
 
 " autopair setting
 let g:AutoPairsShortcutJump = '<S-Tab>'
-let g:AutoPairsShortcutFastWrap='<C-z>'
+let g:AutoPairsShortcutFastWrap='<C-v>'
 
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 0
 let g:AutoPairsShortcutBackInsert = '<M-b>'
 
 
@@ -234,3 +229,5 @@ let Tlist_Use_Right_Window   = 0
 " let Tlist_Show_One_File=1
 
 let Tlist_File_Fold_Auto_Close=1
+
+unmap <C-i>
