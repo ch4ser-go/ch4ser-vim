@@ -5,6 +5,7 @@ The Neovim configuration file for ctf's web dog, works well on WSL.
 
 ### Requirement
 ```
+install neovim ,ccls(for clang completion) and jedi(for python completion)
 apt install neovim ccls
 pip install jedi
 
@@ -13,13 +14,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 nvm install stable
 nvm alias stable
 
-# to install vim-plug
+# to install vim-plug (vim plugins manager)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ### move the repo to ~/.config/nvim
 
-## modify ~/.vim/plugged/onedark.vim/color/onedark.vim to remove background
+### modify ~/.vim/plugged/onedark.vim/color/onedark.vim to remove background
 ```
 change from:
   if g:onedark_termcolors == 16
@@ -41,3 +42,5 @@ to:
     let l:ctermbg = "NONE"
   endif
 ```
+
+### If you are using WSL or other ternimal that can modify background, you can use the wallpaper given in the repo or what ever you like.
