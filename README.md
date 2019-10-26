@@ -2,6 +2,7 @@
 
 The ``Neovim`` configuration file for ctf's web dog, works well on ``Windows (WSL)``.
 
+## preview
 ![image](https://user-images.githubusercontent.com/40637063/67621473-90a87580-f842-11e9-9661-2c8556a570c7.png)
 
 ## how to use
