@@ -102,7 +102,7 @@ call plug#end()
 " coc.nvim
 "
 "
-let g:coc_global_extensions = ['coc-python', 'coc-json', 'coc-tsserver','coc-snippets','coc-phpls','https://github.com/andys8/vscode-jest-snippets']
+let g:coc_global_extensions = ['coc-html','coc-css','coc-emmet','coc-python', 'coc-json', 'coc-tsserver','coc-snippets','coc-phpls','https://github.com/andys8/vscode-jest-snippets']
 
 " if hidden is not set, TextEdit might fail.
 set hidden
