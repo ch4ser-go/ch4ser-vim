@@ -1,5 +1,5 @@
 # ch4ser-vim
-The Neovim configuration file for ctf's web dog
+The Neovim configuration file for ctf's web dog, works well on WSL.
 
 ## how to use
 
