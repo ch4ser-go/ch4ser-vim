@@ -87,6 +87,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
+Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
@@ -206,9 +207,7 @@ let g:bookmark_highlight_lines = 1
 " unmap mp
 nmap mN <Plug>BookmarkPrev
 
-
 " nerdcomment setting
-" comment plugin setting
 " comment followed a space
 let g:NERDSpaceDelims=1
 map <C-_> <Plug>NERDCommenterToggle
@@ -227,7 +226,6 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window   = 0
 
 " let Tlist_Show_One_File=1
-
 let Tlist_File_Fold_Auto_Close=1
 
 unmap <C-i>
