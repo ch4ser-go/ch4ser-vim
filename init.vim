@@ -52,7 +52,7 @@ set pastetoggle=<F9>
 
 map vs :vs 
 map sp :sp 
-map go :Goyo
+map go :Goyo<CR>
 map <leader>l <C-w>l
 map <leader>h <C-w>h
 map <leader>j <C-w>j
@@ -97,6 +97,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
 call plug#end()
