@@ -24,8 +24,8 @@ autocmd VimEnter * :silent! loadview
 
 nnoremap ) $
 nnoremap ( 0
-nnoremap E :e 
 nnoremap w :mkview<CR>:w!<CR>
+nnoremap E W
 nnoremap e w
 nnoremap Q q
 nnoremap q :mkview<CR>:q!<CR>
@@ -52,6 +52,7 @@ set pastetoggle=<F9>
 
 map vs :vs 
 map sp :sp 
+map go :Goyo
 map <leader>l <C-w>l
 map <leader>h <C-w>h
 map <leader>j <C-w>j
@@ -94,6 +95,7 @@ Plug 'mhinz/vim-startify'
 Plug 'joshdick/onedark.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/goyo.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
