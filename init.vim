@@ -38,7 +38,7 @@ func Runit()
     elseif &filetype == 'javascript'
 	exec "!time node %"
     elseif &filetype == 'c'
-	exec "!gcc % -o output -lpcap"
+	exec "!gcc % -o output"
 	exec "!time sudo ./output"
     elseif &filetype == 'cpp'
 	exec "!g++ % -o output"
