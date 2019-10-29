@@ -28,8 +28,8 @@ nnoremap w :mkview<CR>:w!<CR>
 nnoremap E W
 nnoremap e w
 nnoremap Q q
-nnoremap q :mkview<CR>:q!<CR>
-map R :call Runit()<CR>
+nnoremap q :mkview<CR>:wq!<CR>
+map R :w<CR>:call Runit()<CR>
 func Runit()
     if &filetype == 'php'
     	exec "!time php %"
