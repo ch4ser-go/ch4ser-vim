@@ -22,14 +22,17 @@ autocmd VimEnter * :silent! loadview
 " autocmd TabEnter * :silent! loadview
 " autocmd WinNew * :silent! loadview
 
+vnoremap ) $
+vnoremap ( 0
 nnoremap ) $
 nnoremap ( 0
 nnoremap w :mkview<CR>:w!<CR>
 nnoremap E W
 nnoremap e w
 nnoremap Q q
-nnoremap q :mkview<CR>:q!<CR>
+nnoremap q :silent mkview<CR>:q!<CR>)
 map R :w<CR>:call Runit()<CR>
+
 func Runit()
     if &filetype == 'php'
     	exec "!time php %"
@@ -38,11 +41,13 @@ func Runit()
     elseif &filetype == 'javascript'
 	exec "!time node %"
     elseif &filetype == 'c'
-	exec "!gcc % -o output"
+	exec "!gcc % -o output -lpcap"
 	exec "!time sudo ./output"
     elseif &filetype == 'cpp'
 	exec "!g++ % -o output"
 	exec "!time ./output"
+    elseif &filetype == 'go'
+	exec "!time go run %"
     endif
 endfunc
 "
