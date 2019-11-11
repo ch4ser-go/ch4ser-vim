@@ -19,7 +19,6 @@ set encoding=utf8
 let mapleader="\<Space>"
 
 autocmd VimEnter * :silent! loadview
-" autocmd TabEnter * :silent! loadview
 " autocmd WinNew * :silent! loadview
 
 vnoremap ) $
@@ -219,7 +218,6 @@ nmap mN <Plug>BookmarkPrev
 " comment followed a space
 let g:NERDSpaceDelims=1
 map <C-_> <Plug>NERDCommenterToggle
-
 
 " nerdtree setting
 map T :NERDTreeToggle<CR><leader>l
