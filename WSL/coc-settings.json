@@ -1,0 +1,23 @@
+{
+    "python.jediEnabled": true,
+    "python.jediPath": "/usr/lib/python3.8/site-packages",
+    "phpls.enable": true,
+    "intelephense.licenceKey": "0061BL5T19N4472",
+    "typescript.suggest.enabled": false,
+    "typescript.suggestionActions.enabled": false,
+    "typescript.validate.enable": false,
+    "typescript.showUnused": false,
+    "languageserver": {
+    "ccls": {
+	"command": "ccls",
+	"filetypes": ["c","cpp","objc","objcpp"],
+	"rootPatterns": [".ccls","compile_commands.json",".vim/",".git/",".hg/"],
+	"initializationOptions": {
+	    "cache": {
+		"directory": "/tmp/ccls"
+	    }
+	}
+    }
+	
+    }
+}
